@@ -1,0 +1,175 @@
+.header{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 7%;
+    z-index: 999;
+    background-color: rgb(233, 232, 232);
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+}
+.header>img{
+    width: 10rem;
+}
+
+.navbar{
+    display: flex;
+}
+.navitem{
+    font-size: 1.8rem;
+    margin: 1rem 1rem;
+    text-decoration: none;
+    color: gray;
+
+}
+
+
+.navitem::before {
+    content: " ";
+    position: relative;
+    display: block;
+    top: 2.4rem;
+    width: 100%;
+    height: .2rem;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform: scaleX(0);
+    transition: 0.3s ease;
+    
+}
+.navitem:hover::before{
+    transform: scaleX(1);
+}
+.navitem:hover{
+    color: black;
+}
+ .active{
+    color: black;
+    font-weight: bold;
+    
+}
+.menubtn{
+    display: none;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+.line{
+border: .2rem solid black;
+background-color: black;
+margin: .2rem 0;
+width: 2.5rem;
+}
+.secline{
+    display: flex;
+    flex-direction: column;
+}
+.secondline1{
+    position: absolute;
+    transform: rotate(45deg);
+    transition: .5s;
+}
+.secondline2{
+ transform: rotate(-45deg);
+ transition: .5s;
+}
+.firstline{
+    position: relative;
+    transition: .5s;
+    left: -100%;
+}
+.thirdline{
+    position: relative;
+    left: -100%;
+    transition: .5s;
+}
+
+.acc{
+    color: black;
+    margin-left: 5rem ;
+} 
+.secnav{
+    display: none;
+}
+@media(max-width:1100px) {
+    html {
+        font-size: 57%;
+    }
+}
+@media(max-width:977px) {
+    html {
+        font-size: 57%;
+    }
+    .navbar{
+        display: none;
+    }
+}
+@media(max-width:977px) {
+    
+    .navbar{
+        display: none;
+    }
+    .menubtn{
+        overflow-x: hidden;
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+    }
+    .acc{
+        color: black;
+        margin-top: 3rem;
+        margin-left: 0 ;
+    }
+    .secnav{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: -100vh;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        z-index:990;
+        transition: 1s;
+        
+    }
+    .navbar1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        justify-content: center;
+        
+    }
+    .navitem::before {
+        content: " ";
+        position: relative;
+        display: block;
+        top: 2.4rem;
+        width: 100%;
+        height: .2rem;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(255, 255, 255);
+        transform: scaleX(0);
+        transition: 0.3s ease;
+        
+    }
+    .navitem:hover::before{
+        transform: scaleX(1);
+    }
+    .navitem:hover{
+        color: rgb(255, 255, 255);
+    }
+    .acc{
+        color: white;
+    }
+    .active{
+        color: white;
+    }
+}
